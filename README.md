@@ -6,7 +6,7 @@
 </h1>
 
 <h3 align="center">
-  Breaking Bad app using the <a href="https://www.breakingbadapi.com/">Breaking Bad API</a>
+  Breaking Bad app using the <a href="https://www.breakingbadapi.com/" target="_blank">Breaking Bad API</a>
 </h3>
 
 <p align="center">
@@ -16,12 +16,12 @@
 
 <div align="center">
   <sub>Built with ❤︎ by
-  <a href="https://twitter.com/mndslv">Amanda Silva</a>.
+  <a href="https://twitter.com/mndslv" target="_blank">Amanda Silva</a>.
 </div>
 
 ## Overview
 
-- **This is a work in progress**.
+**It's still under construction :)** See current progress in [Los Pollos Hermanos](https://lospolloshermanos.netlify.app).
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/amandafsilva/breaking-bad/master/brba-screenshot.PNG" width="550">
