@@ -27,7 +27,7 @@ const HeaderContainer = ({ history, location }: RouteComponentProps) => {
 const menuItems: Array<AppBarMenuItem> = [
   { link: '/', label: 'Home' },
   { link: '/episodes', label: 'Episodes' },
-  { link: '/', label: 'Characters' },
+  { link: '/characters', label: 'Characters' },
 ];
 
 export default withRouter(HeaderContainer);
