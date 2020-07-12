@@ -8,6 +8,7 @@ const useHeaderStyles = createUseStyles({
     backgroundColor: '#dadada',
     color: '#272727',
     height: '8rem',
+    flexShrink: 0,
   },
   logo: {
     height: 50,
@@ -46,7 +47,6 @@ const useHeaderStyles = createUseStyles({
       height: '100%',
     },
     '&:hover, &.active': {
-      // fontWeight: 'bold',
       color: '#ddc831',
       transitionDelay: '.05s',
     },

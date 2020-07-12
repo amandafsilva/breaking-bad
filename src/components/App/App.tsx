@@ -1,14 +1,12 @@
 import React from 'react';
 import AppRouter from './AppRouter';
-import useStyles from './App.styles';
-import HeaderContainer from '../Header/HeaderContainer';
+import useAppStyles from './App.styles';
 
 const App = () => {
-  const { root } = useStyles();
+  const { root } = useAppStyles();
 
   return (
     <div className={root}>
-      <HeaderContainer />
       <AppRouter />
     </div>
   );

@@ -1,14 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import HomeContainer from '../Home/HomeContainer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HeaderContainer from '../Header/HeaderContainer';
+import HomeRoute from '../Home/HomeRoute';
+import EpisodesRoute from '../Episodes/EpisodesRoute';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <Router>
+      <HeaderContainer />
       <Switch>
-        <Route path="/" component={HomeContainer} />
+        <Route path="/" exact component={HomeRoute} />
+        <Route path="/episodes" component={EpisodesRoute} />
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
 };
 

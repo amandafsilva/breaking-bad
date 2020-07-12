@@ -1,24 +1,33 @@
 import React from 'react';
 import Header from './Header';
 import { AppBarMenuItem } from './Header.types';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
-const HeaderContainer = () => {
-  const [selectedMenu, setSelectedMenu] = React.useState(menuItems[0]);
+const HeaderContainer = ({ history, location }: RouteComponentProps) => {
+  const [selectedMenu, setSelectedMenu] = React.useState<AppBarMenuItem | null>(null);
+
+  React.useEffect(() => {
+    const currentMenu =
+      menuItems.find((menuItem) => menuItem.link === location.pathname) || menuItems[0];
+    setSelectedMenu(currentMenu);
+  }, [location]);
 
   const onMenuSelected = (selectedMenu: AppBarMenuItem) => {
     setSelectedMenu(selectedMenu);
+    history.push(selectedMenu.link);
   };
 
   return (
-    <Header menuItems={menuItems} selectedMenu={selectedMenu} onMenuSelected={onMenuSelected} />
+    selectedMenu && (
+      <Header menuItems={menuItems} selectedMenu={selectedMenu} onMenuSelected={onMenuSelected} />
+    )
   );
 };
 
 const menuItems: Array<AppBarMenuItem> = [
   { link: '/', label: 'Home' },
-  { link: '/', label: 'Episodes' },
+  { link: '/episodes', label: 'Episodes' },
   { link: '/', label: 'Characters' },
-  { link: '/quotes', label: 'Quotes' },
 ];
 
-export default HeaderContainer;
+export default withRouter(HeaderContainer);

@@ -13,6 +13,8 @@ const useHomeStyles = createUseStyles({
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
+    flexGrow: 1,
+    minHeight: 0,
   },
   quoteContainer: {
     width: '50%',
@@ -22,7 +24,6 @@ const useHomeStyles = createUseStyles({
     justifyContent: 'flex-end',
     textAlign: 'right',
     paddingRight: '1rem',
-    // borderRight: '0.5rem solid #ddc831',
     '& h1': {
       margin: '5rem 0 0',
       color: '#272727',

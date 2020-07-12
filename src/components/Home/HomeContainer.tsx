@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import BreakingBadService from '../../services/BreakingBad/BreakingBadService';
-import { Quote } from '../Header/Quote';
+import { Quote } from '../Header/Header.types';
 
 const HomeContainer = () => {
   const [homeQuote, setHomeQuote] = React.useState<Quote | null>(null);
