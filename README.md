@@ -24,7 +24,7 @@
 - **This is a work in progress**.
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/amandafsilva/breaking-bad/master/img/brba-screenshot.png" width="550">
+	<img src="https://raw.githubusercontent.com/amandafsilva/breaking-bad/master/brba-screenshot.PNG" width="550">
 </p>
 
 ## Credits
