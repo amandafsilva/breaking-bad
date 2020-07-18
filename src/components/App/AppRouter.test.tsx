@@ -1,7 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import AppRouter from './AppRouter';
-import HomeContainer from '../Home/HomeContainer';
+import EpisodesRoute from '../Episodes/EpisodesRoute';
+import HomeRoute from '../Home/HomeRoute';
+import CharactersRoute from '../Characters/CharactersRoute';
 
 describe('AppRouter', () => {
   it('should render without crashing', () => {
@@ -18,7 +20,16 @@ describe('AppRouter', () => {
     const expectedRoutes = [
       {
         path: '/',
-        component: HomeContainer,
+        exact: true,
+        component: HomeRoute,
+      },
+      {
+        path: '/episodes',
+        component: EpisodesRoute,
+      },
+      {
+        path: '/characters',
+        component: CharactersRoute,
       },
     ];
 

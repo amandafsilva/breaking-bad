@@ -1,6 +1,6 @@
 import React from 'react';
 import useHomeStyles from './Home.styles';
-import { Quote } from '../Header/Header.types';
+import { Quote } from '../../../Header/Header.types';
 
 interface HomeProps {
   quote: Quote;

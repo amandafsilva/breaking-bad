@@ -1,7 +1,15 @@
 import { createUseStyles } from 'react-jss';
-import homeBackground from '../../assets/brba3.png';
+import homeBackground from '../../../../assets/brba3.png';
 
 const useHomeStyles = createUseStyles({
+  '@-webkit-keyframes myfirst': {
+    from: { opacity: 0.2 },
+    to: { opacity: 1 },
+  },
+  '@keyframes myfirst': {
+    from: { opacity: 0.2 },
+    to: { opacity: 1 },
+  },
   content: {
     height: '100%',
     backgroundImage: `url(${homeBackground})`,
@@ -15,6 +23,7 @@ const useHomeStyles = createUseStyles({
     justifyContent: 'flex-end',
     flexGrow: 1,
     minHeight: 0,
+    transition: 'background 300ms ease-in 200ms',
   },
   quoteContainer: {
     width: '50%',

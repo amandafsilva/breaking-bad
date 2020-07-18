@@ -29,12 +29,36 @@
     "typescript": "~3.7.2",
     "yarn": "^1.22.4"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.tsx",
+      "!src/serviceWorker.ts",
+      "!src/react-app-end.d.ts",
+      "!src/**/*.types.ts",
+      "!src/**/*.styles.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --colors --watchAll",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.ts*\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn coverage"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -68,6 +92,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
+    "husky": "^4.2.5",
     "prettier": "^2.0.5"
   }
 }

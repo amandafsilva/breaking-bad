@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import HomeContainer from './HomeContainer';
+import CharactersRoute from './CharactersRoute';
 
-describe('HomeContainer', () => {
+describe('CharactersRoute', () => {
   it('should render without crashing', () => {
     // Given
-    const wrapper = shallow(<HomeContainer />);
+    const wrapper = shallow(<CharactersRoute />);
 
     // Then
     expect(wrapper.exists()).toBe(true);
